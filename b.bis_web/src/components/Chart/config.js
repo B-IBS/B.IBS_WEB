@@ -52,7 +52,7 @@ export default {
         "tickSize": 5,
         "tickPadding": 5,
         "tickRotation": 0,
-        "legend": "country",
+        "legend": "weeks",
         "legendPosition": "middle",
         "legendOffset": 32
     },
@@ -60,7 +60,7 @@ export default {
         "tickSize": 5,
         "tickPadding": 5,
         "tickRotation": 0,
-        "legend": "food",
+        "legend": "Pain scale",
         "legendPosition": "middle",
         "legendOffset": -40
     },
