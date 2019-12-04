@@ -1,0 +1,24 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      
+    - name: Typescript compiler 
+      uses: iCrawl/action-tsc@v1
+    
+    - name: Run tests
+      run: npm run test
+    
+    - name: Run ESLint
+      uses: stefanoeb/eslint-action@1.0.0
+    
+    - name: Build
+      run: npm run build
+    
