@@ -55,7 +55,7 @@ class Chart extends React.Component {
                     {
                         on: 'hover',
                         style: {
-                            itemBackground: 'rgba(0, 0, 0, .03)',
+                            itemBackground: 'rgba(255, 255, 255, .03)',
                             itemOpacity: 1,
                         }
                     }
