@@ -10,11 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run tests
+      working-directory: ./b.ibs_web
       run: npm run test
     
     - name: Run ESLint
-      uses: stefanoeb/eslint-action@1.0.0
+      working-directory: ./b.ibs_web
+      run: npm run lint
     
     - name: Build
+      working-directory: ./b.ibs_web
       run: npm run build
     
