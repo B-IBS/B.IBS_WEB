@@ -28,6 +28,7 @@ class Chart extends React.Component {
                     axisRight={null}
                     axisBottom={config.axisBottom}
                     axisLeft={config.axisLeft}
+                    onClick={(point)=>console.log(point)}
                     legends={[
                                     {
                 anchor: 'bottom-right',
