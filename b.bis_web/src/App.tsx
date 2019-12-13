@@ -1,9 +1,12 @@
 import React from 'react';
-import SignInSide from './components/tokenLogin';
+import { StoreProvider } from './context/useStore';
+import HomePage from './components/HomePage';
 
 const App: React.FC = () => (
   <div className="App">
-    <SignInSide />
+    <StoreProvider>
+      <HomePage />
+    </StoreProvider>
   </div>
 );
 

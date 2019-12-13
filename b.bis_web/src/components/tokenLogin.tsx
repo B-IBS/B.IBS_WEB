@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { createStyles, makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
+import useDefaultStore from '../context/storeApi';
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
@@ -45,6 +46,8 @@ const useStyles = makeStyles((theme) => createStyles({
 
 export default function SignInSide() {
   const classes = useStyles();
+  const { updateLogin } = useDefaultStore();
+  const [inputToken, setInputToken] = useState();
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -67,6 +70,7 @@ export default function SignInSide() {
             name="token"
             autoComplete="token"
             autoFocus
+            onChange={(event) => setInputToken(event.target.value)}
           />
           <Button
             type="submit"
@@ -74,6 +78,7 @@ export default function SignInSide() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={() => updateLogin(inputToken)}
           >
                             Continuer
           </Button>
