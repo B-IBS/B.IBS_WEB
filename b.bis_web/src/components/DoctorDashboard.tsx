@@ -7,6 +7,7 @@ import {
   makeStyles,
 } from '@material-ui/core';
 import useDefaultStore from '../context/storeApi';
+import Chart from './Chart/chart';
 
 const useStyles = makeStyles((theme) => createStyles({
   root: {
@@ -29,6 +30,7 @@ export default function Test() {
       <Typography component="p">
         Paper can be used to build surface or other elements for your application.
       </Typography>
+      <Chart />
     </Paper>
   );
 }
