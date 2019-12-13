@@ -54,7 +54,7 @@ class Pie extends React.Component {
                     fill={[
                         {
                             match: {
-                                id: 'ruby'
+                                id: 'vegetable'
                             },
                             id: 'dots'
                         },
@@ -66,43 +66,13 @@ class Pie extends React.Component {
                         },
                         {
                             match: {
-                                id: 'c'
-                            },
-                            id: 'dots'
-                        },
-                        {
-                            match: {
-                                id: 'go'
-                            },
-                            id: 'dots'
-                        },
-                        {
-                            match: {
-                                id: 'python'
+                                id: 'fruit'
                             },
                             id: 'dots'
                         },
                         {
                             match: {
                                 id: 'pasta'
-                            },
-                            id: 'lines'
-                        },
-                        {
-                            match: {
-                                id: 'lisp'
-                            },
-                            id: 'lines'
-                        },
-                        {
-                            match: {
-                                id: 'elixir'
-                            },
-                            id: 'lines'
-                        },
-                        {
-                            match: {
-                                id: 'javascript'
                             },
                             id: 'lines'
                         }
