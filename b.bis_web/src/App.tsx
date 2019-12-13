@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Chart} from "./components";
-import {Pie} from "./components"
+import {Calendar, Chart, Pie} from "./components";
 
 const App: React.FC = () => {
     return (
@@ -10,6 +9,7 @@ const App: React.FC = () => {
             <header className="App-header">
                 <Chart/>
                 <Pie/>
+                <Calendar/>
             </header>
         </div>
     );
