@@ -1,5 +1,5 @@
 import React from 'react'
-import { ResponsiveLine } from '@nivo/line'
+import {ResponsiveLine} from '@nivo/line'
 
 import data from '../../data'
 import config from './config'
@@ -15,7 +15,12 @@ class Chart extends React.Component {
                     data={data}
                     margin={config.margin}
                     xScale={{type: 'point'}}
-                    yScal={{type: 'linear', stacked: true, min: 'auto', max: 'auto'}}
+                    yScal={{
+                        type: 'linear',
+                        stacked: true,
+                        min: 'auto',
+                        max: 'auto'
+                    }}
                     colors={{scheme: 'nivo'}}
                     pointSize={10}
                     pointColor={{theme: 'background'}}
@@ -28,31 +33,33 @@ class Chart extends React.Component {
                     axisRight={null}
                     axisBottom={config.axisBottom}
                     axisLeft={config.axisLeft}
-                    onClick={(point)=>console.log(point)}
+                    // onClick={(point) => console.log(point)}
+                    onClick={() => this.setState(data)}
                     legends={[
-                                    {
-                anchor: 'bottom-right',
-                direction: 'column',
-                justify: false,
-                translateX: 100,
-                translateY: 0,
-                itemsSpacing: 0,
-                itemDirection: 'left-to-right',
-                itemWidth: 80,
-                itemHeight: 20,
-                itemOpacity: 0.75,
-                symbolSize: 12,
-                symbolShape: 'circle',
-                symbolBorderColor: 'rgba(0, 0, 0, .5)',
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemBackground: 'rgba(255, 255, 255, .03)',
-                            itemOpacity: 1,
+                        {
+                            anchor: 'bottom-right',
+                            direction: 'column',
+                            justify: false,
+                            translateX: 100,
+                            translateY: 0,
+                            itemsSpacing: 0,
+                            itemDirection: 'left-to-right',
+                            itemWidth: 80,
+                            itemHeight: 20,
+                            itemOpacity: 0.75,
+                            symbolSize: 12,
+                            symbolShape: 'circle',
+                            symbolBorderColor: 'rgba(0, 0, 0, .5)',
+                            effects: [
+                                {
+                                    on: 'hover',
+                                    style: {
+                                        itemBackground: 'rgba(255, 255, 255, .03)',
+                                        itemOpacity: 1,
+                                    }
+                                }
+                            ]
                         }
-                    }
-                        ]}
                     ]}
                 />
             </div>
